@@ -6,10 +6,10 @@ const AdditionalFeature = props => {
 
   console.log(props)
   return (
-    <li>
+    <li className='listed'>
       {}
       <button className="button" onClick={() => {props.addFeature(props.feature)}}>Add</button>
-      {props.feature.name} (+{props.feature.price}) (+{props.car.price})
+      {props.feature.name}: ${props.feature.price}
     </li>
   );
 };

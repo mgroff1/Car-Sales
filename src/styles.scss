@@ -1,8 +1,11 @@
+
+
+
 html, body, #root {
   height: 100%;
 }
 body {
-  background: #333;
+  background: #222;
   margin: 0;
   display: grid;
   padding: 3em;
@@ -11,7 +14,7 @@ body {
 .boxes {
   display: grid;
   grid-gap: 2em;
-  grid-template-columns: repeat(2, minmax(350px, 1fr));
+  grid-template-columns:1fr 1fr;
   grid-template-rows: auto;
 }
 .box {
@@ -28,22 +31,30 @@ body {
   ol {
     margin-left: 0;
     li {
+      font-family: 'Roboto Mono', monospace;
       align-items: center;
       display: flex;
       justify-content: flex-start;
+      color:black;
+    }
+    li.listed{
+      background:rgba(55,55,55,.5);
+      margin:3px 4px 3px 4px;
+      padding:2px;
     }
   }
 }
 .button {
-  background: hotpink;
-  border: 1px solid transparent;
+  background: rgba(55,55,125,1);
+  border: inset 1px solid transparent;
   color: white;
   margin-right: 1em;
-  padding: .25em .75em;
-  transition: all .25s ease-in;
+  padding: 9px 9px;
+  transition: all .25s ease-in-out;
   &:hover {
     background: white;
+    transition: all .25s ease-in-out;
     border: 1px solid hotpink;
-    color: #333;
+    color: #421;
   }
 }
